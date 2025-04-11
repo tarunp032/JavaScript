@@ -22,8 +22,11 @@ console.log("");
 let courses = ["HTML", "CSS", "JavaScript", "Python", "SQL", "Python"];
 console.log(courses);
 if (courses.includes("Python")) {
-  let index = courses.lastIndexOf("Python");
-  courses.splice(index, 1);
+  const first = courses.indexOf("Python");
+  const second = courses.indexOf("Python", first + 1);
+  if (second !== -1) {
+    courses.splice(second, 1);
+  }
   console.log(courses);
 }
 console.log("");
@@ -49,3 +52,21 @@ let index = cart.indexOf("Shoes") + 1;
 cart.splice(index, 0, "Wallet");
 console.log(cart);
 console.log("");
+
+
+// 4. Hospital Management App
+// Original Array:
+// let patients = ["Rina", "Ayaan", "Soham", "Deep", "Nisha", "Soham"];
+
+// Scenario: Remove "Soham" as he was mistakenly added twice in the system.
+
+let patients = ["Rina", "Ayaan", "Soham", "Deep", "Nisha", "Soham"];
+console.log(patients);
+if (patients.includes("Soham")){
+  const first = patients.indexOf("Soham");
+  const second = patients.indexOf("Soham", first + 1);
+  if (second !== -1) {
+    patients.splice(second, 1);
+  }
+  console.log(patients);
+}
