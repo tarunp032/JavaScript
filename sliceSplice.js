@@ -30,7 +30,9 @@ if (courses.includes("Python")) {
   console.log(courses);
 }
 console.log("");
+
 // <------------------------------------------------------------->
+
 let coursess = ["HTML", "CSS", "JavaScript", "Python", "SQL"];
 let firstIndex = coursess.indexOf("Python");
 let secondIndex = coursess.indexOf("Python", firstIndex + 1);
